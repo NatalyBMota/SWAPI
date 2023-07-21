@@ -1,4 +1,12 @@
-fetch("https://swapi-graphql.netlify.app/.netlify/functions/index?query={allFilms{films{title}}}")
+let queryString = `{
+	allFilms {
+		films {
+			title
+		}
+	}
+}`;
+
+fetch(`https://swapi-graphql.netlify.app/.netlify/functions/index?query=${queryString}`)
 .then(function(response) {
 	if (response.status == 200) {
 		return response.json();
@@ -8,7 +16,7 @@ fetch("https://swapi-graphql.netlify.app/.netlify/functions/index?query={allFilm
 	}
 })
 .then(function(jsonData) {
-	console.log(jsonData);
+	console.log(jsonData.data.allFilms.films[0]);
 })
 .catch(function(error) {
 	console.log("There was a problem with getting data from the API in JSON format.", error);
