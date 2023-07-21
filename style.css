@@ -1,3 +1,19 @@
+@font-face {
+    font-family: "Stars Jedi Rounded";
+    src: url('fonts/star-jedi-font/StarJediRounded-jW3R.ttf') format('truetype');
+    font-family: "Stars Jedi";
+    src: url('fonts/star-jedi-font/StarJedi-DGRW.ttf') format('truetype');
+}
+
+body {
+    font-family: "Tenor Sans", sans-serif;
+}
+h1, h2 {
+    font-family: "Stars Jedi Rounded", "Audiowide", "Michroma", "Tenor Sans", sans-serif;
+}
+h3, h4 {
+    font-family: "Michroma", "Tenor Sans", "Audiowide", sans-serif;
+}
 .main {
     margin-left: 2rem;
 }
