@@ -29,3 +29,9 @@ Documentation: https://studio.apollographql.com/public/star-wars-swapi/variant/c
 
 Relevant Tutorials
 Creating a multiline string in JavaScript: https://www.freecodecamp.org/news/javascript-multiline-string-how-to-create-multi-line-strings-in-js/
+
+https://studio.apollographql.com/public/star-wars-swapi/variant/current/explorer
+
+https://www.linkedin.com/learning/introduction-to-web-apis-22019269/what-is-an-api?u=100575394
+
+https://www.linkedin.com/learning/learning-git-and-github-14213624/travel-the-multiverse-with-git-and-github?u=100575394
