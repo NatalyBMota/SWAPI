@@ -4,3 +4,9 @@
 .individualFilm {
     margin-bottom: 5rem;
 }
+h3 {
+    font-weight: normal;
+}
+span {
+    font-weight: bold;
+}

@@ -47,21 +47,17 @@ function populateWebPageWithServerData(jsonData) {
 		const textNodeWithDirector = document.createTextNode(`${director}`);
 		h3.appendChild(directorSpan);
 		h3.appendChild(textNodeWithDirector);
-		h3.style.fontWeight = 'normal';
-		directorSpan.style.fontWeight = 'bold';
 
 		divFilm.appendChild(h3);
 		const releaseDate = filmsArr[i].releaseDate;
 		const convertedReleaseDate = convertToFriendlyDateFormat(releaseDate);
 		const h4 = document.createElement('h4');
-		h4.style.fontWeight = 400;
 		const releaseDateSpan = document.createElement('span');
 		releaseDateSpan.innerText = "Release Date: ";
 		const txtNodeWithReleaseDate = document.createTextNode(`${convertedReleaseDate}`);
 		releaseDateSpan.appendChild(txtNodeWithReleaseDate);
 		h4.appendChild(releaseDateSpan);
 		divFilm.appendChild(h4);
-		releaseDateSpan.style.fontWeight = 'bold';
 
 		const speciesArr = filmsArr[i].speciesConnection.species;
 		let ul = document.createElement('ul');
@@ -73,9 +69,10 @@ function populateWebPageWithServerData(jsonData) {
 			const species = speciesArr[i];
 			const speciesName = species.name;
 			let li = document.createElement('li');
+
 			let spanSpeciesName = document.createElement('span');		
 			spanSpeciesName.innerText = "Name: ";
-			spanSpeciesName.style.fontWeight = 'bold';
+
 			li.appendChild(spanSpeciesName);
 			ul.appendChild(li);
 			const txtNodeWithSpeciesName = document.createTextNode(`${speciesName}`);
@@ -84,13 +81,13 @@ function populateWebPageWithServerData(jsonData) {
 			const classification = species.classification;
 			let ulClassification = document.createElement('ul');
 			let liClassification = document.createElement('li');
+
 			let spanClassification = document.createElement('span');
 			spanClassification.innerText = "Classification: ";
-			spanClassification.style.fontWeight = 'bold';
+
 			liClassification.appendChild(spanClassification);
 			let txtNodeClassification = document.createTextNode(`${classification}`);
 			liClassification.appendChild(txtNodeClassification);
-			//liClassification.innerText = `${classification}`;
 			li.appendChild(ulClassification);
 			ulClassification.appendChild(liClassification);
 		}
