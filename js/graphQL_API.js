@@ -83,13 +83,7 @@ fetch(`https://swapi-graphql.netlify.app/.netlify/functions/index?query=${queryS
 
 
 function convertToFriendlyDateFormat(date) {
-	
-	const month = getMonth(date);
-	/*
-	const numericDay = getDate(date);
-	const year = getFullYear(date);
-	const convertedDate = `${month}/${numericDay}/${year}`;
+	const dateArr = date.split("-");
+	const convertedDate = `${dateArr[1]}/${dateArr[2]}/${dateArr[0]}`;
 	return convertedDate;
-	*/
-	return date;
 }
