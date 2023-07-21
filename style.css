@@ -1,3 +1,6 @@
-bold {
-    font-weight: bold;
+.main {
+    margin-left: 2rem;
+}
+.individualFilm {
+    margin-bottom: 5rem;
 }
