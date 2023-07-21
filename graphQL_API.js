@@ -41,11 +41,15 @@ fetch(`https://swapi-graphql.netlify.app/.netlify/functions/index?query=${queryS
 .then(function(jsonData) {
 	console.log(jsonData.data.allFilms.films[0].title);
 	const mainDiv = document.querySelector('.main');
-	const filmTitle = jsonData.data.allFilms.films[0].title;
-	const h2 = document.createElement('h2');
-	h2.innerText = `${filmTitle}`;
-	mainDiv.appendChild(h2);
-
+	const filmsArr = jsonData.data.allFilms.films
+	
+	for (let i = 0; i < filmsArr.length; i++) {
+		const filmTitle = filmsArr[i].title;
+		const h2 = document.createElement('h2');
+		h2.innerText = `${filmTitle}`;
+		mainDiv.appendChild(h2);
+	}
+	
 })
 .catch(function(error) {
 	console.log("There was a problem with getting data from the API in JSON format.", error);
