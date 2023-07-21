@@ -94,9 +94,6 @@ function populateWebPageWithServerData(jsonData) {
 			li.appendChild(ulClassification);
 			ulClassification.appendChild(liClassification);
 		}
-
-		let br = document.createElement('br');
-		divFilm.appendChild(br);
 	}
 }
 
