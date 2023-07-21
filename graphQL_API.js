@@ -39,10 +39,11 @@ fetch(`https://swapi-graphql.netlify.app/.netlify/functions/index?query=${queryS
 	}
 })
 .then(function(jsonData) {
-	console.log(jsonData.data.allFilms.films);
+	console.log(jsonData.data.allFilms.films[0].title);
 	const mainDiv = document.querySelector('.main');
+	const filmTitle = jsonData.data.allFilms.films[0].title;
 	const h2 = document.createElement('h2');
-	h2.innerText = "Test";
+	h2.innerText = `${filmTitle}`;
 	mainDiv.appendChild(h2);
 
 })
