@@ -81,9 +81,59 @@ fetch(`https://swapi-graphql.netlify.app/.netlify/functions/index?query=${queryS
 	console.log("There was a problem with getting data from the API in JSON format.", error);
 });
 
-
+/*
 function convertToFriendlyDateFormat(date) {
 	const dateArr = date.split("-");
 	const convertedDate = `${dateArr[1]}/${dateArr[2]}/${dateArr[0]}`;
+	return convertedDate;
+}
+*/
+
+function convertToFriendlyDateFormat(date) {
+	const dateArr = date.split("-");
+	let month = dateArr[1];
+	month = +month;
+	let monthSpelledOut = "";
+	
+	switch (month) {
+		case 1:
+			monthSpelledOut = "January";
+			break;
+		case 2:
+			monthSpelledOut = "February";
+			break;
+		case 3:
+			monthSpelledOut = "March";
+			break;
+		case 4:
+			monthSpelledOut = "April";
+			break;
+		case 5:
+			monthSpelledOut = "May";
+			break;
+		case 6:
+			monthSpelledOut = "June";
+			break;
+		case 7:
+			monthSpelledOut = "July";
+			break;
+		case 8:
+			monthSpelledOut = "August";
+			break;
+		case 9:
+			monthSpelledOut = "September";
+			break;
+		case 10:
+			monthSpelledOut = "October";
+			break;
+		case 11:
+			monthSpelledOut = "November";
+			break;
+		case 12:
+			monthSpelledOut = "December";
+			break;
+	}
+	
+	const convertedDate = `${monthSpelledOut} ${dateArr[2]}, ${dateArr[0]}`;
 	return convertedDate;
 }
