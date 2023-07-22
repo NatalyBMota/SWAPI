@@ -1,13 +1,5 @@
 /*
-let queryString = `{
-	allFilms {
-		films {
-			title
-		}
-	}
-}`;
-
-There must be a space after each property, even if they are each in a separate line. Otherwise, the request won't work and we will get an error.
+	There must be a space after each property, even if they are each in a separate line. Otherwise, the request won't work and we will get an error.
 */
 
 let queryString = `{
@@ -29,43 +21,42 @@ let queryString = `{
 function populateWebPageWithServerData(jsonData) {
 	const mainDiv = document.querySelector('.main');
 	const filmsArr = jsonData.data.allFilms.films;
-	console.log(filmsArr);
 
 	for (let i = 0; i < filmsArr.length; i++) {
 		let divFilm = document.createElement('div');
-		divFilm.className = "individualFilm";
+		divFilm.className = "individualElement";
 		mainDiv.appendChild(divFilm);
 		const filmTitle = filmsArr[i].title;
 		const header = document.createElement('header');
-		const h2 = document.createElement('h2');
-		h2.innerText = `${filmTitle}`;
-		header.appendChild(h2);
+		const h3 = document.createElement('h3');
+		h3.innerText = `${filmTitle}`;
+		header.appendChild(h3);
 		divFilm.appendChild(header);
 
 		const director = filmsArr[i].director;
-		const h3 = document.createElement('h3');
+		const h4 = document.createElement('h4');
 		const directorSpan = document.createElement('span');
 		directorSpan.innerText = "Director: ";
 		const textNodeWithDirector = document.createTextNode(`${director}`);
-		h3.appendChild(directorSpan);
-		h3.appendChild(textNodeWithDirector);
+		h4.appendChild(directorSpan);
+		h4.appendChild(textNodeWithDirector);
+		divFilm.appendChild(h4);
 
-		divFilm.appendChild(h3);
 		const releaseDate = filmsArr[i].releaseDate;
 		const convertedReleaseDate = convertToFriendlyDateFormat(releaseDate);
-		const h4 = document.createElement('h4');
+		const h5 = document.createElement('h5');
 		const releaseDateSpan = document.createElement('span');
 		releaseDateSpan.innerText = "Release Date: ";
 		const txtNodeWithReleaseDate = document.createTextNode(`${convertedReleaseDate}`);
 		releaseDateSpan.appendChild(txtNodeWithReleaseDate);
-		h4.appendChild(releaseDateSpan);
-		divFilm.appendChild(h4);
+		h5.appendChild(releaseDateSpan);
+		divFilm.appendChild(h5);
 
 		const speciesArr = filmsArr[i].speciesConnection.species;
 		let ul = document.createElement('ul');
-		let h4Species = document.createElement('h4');
-		h4Species.innerText = "Species:";
-		divFilm.appendChild(h4Species);
+		let h5Species = document.createElement('h5');
+		h5Species.innerText = "Species:";
+		divFilm.appendChild(h5Species);
 		divFilm.appendChild(ul);
 		for (let i = 0; i < speciesArr.length; i++) {
 			const species = speciesArr[i];
@@ -109,7 +100,7 @@ fetch(`https://swapi-graphql.netlify.app/.netlify/functions/index?query=${queryS
 	populateWebPageWithServerData(jsonData);	
 })
 .catch(function(error) {
-	console.log("There was a problem with getting data from the API in JSON format.", error);
+	console.log("There was a problem with getting data from the API in JSON format.");
 });
 
 /*

@@ -4,23 +4,60 @@
 body {
     font-family: "Tenor Sans", sans-serif;
 }
+h1 {
+    font-size: 4rem;
+}
 h1, h2 {
-    font-family: "Star Jedi Logo Doubleline1", "Stars Jedi Rounded", "Audiowide", "Michroma", "Tenor Sans", sans-serif;
+    font-family: "Audiowide", "Michroma", "Tenor Sans", sans-serif;
 }
 h3, h4 {
     font-family: "Michroma", "Tenor Sans", "Audiowide", sans-serif;
 }
+#top-level {
+    width: 100%;
+    max-width: 900px;
+    margin: 2.5em auto 0 auto;
+    padding: 1em;
+    border-radius: .9em;
+    text-align: center;
+    background: linear-gradient(90deg, #2d2b3c, #ffe81f, #2d2b3c);   
+}
+.main-navigation {
+    display: inline;
+}
+.main-navigation-item {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Audiowide";
+    background-color: #0b5394;
+    box-shadow: 0 0 26px rgba(0,0,0, .13);
+    border-radius: .7em;
+    padding: .7em;
+}
+.main-navigation-item:hover {
+    text-decoration: none;
+    color: #0b5394;
+    font-weight: 500;
+    font-family: "Audiowide";
+    background-color: #dfdfdf;
+    box-shadow: 0 0 26px rgba(0,0,0, .13);
+    border-radius: .7em;
+    padding: .7em;
+}
 .main {
     width: 100%;
     max-width: 900px;
-    margin: 2.5em auto;
+    margin: 2.1em auto;
     padding-left: 2.5em;
-    border-radius: .35em;
+    border-radius: .9em;
     background: #fcfcfc;
     overflow: hidden;
     box-shadow: 0 0 26px rgba(0,0,0, .13);
 }
-.individualFilm {
+
+/* Individual film or planet */
+.individualElement {
     margin-bottom: 5rem;
 }
 h3 {
