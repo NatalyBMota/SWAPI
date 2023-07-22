@@ -49,7 +49,9 @@ h3, h4 {
     width: 100%;
     max-width: 900px;
     margin: 2.1em auto;
+    padding-top: 2.2em;
     padding-left: 2.5em;
+    padding-right: 1.5em;
     border-radius: .9em;
     background: #fcfcfc;
     overflow: hidden;

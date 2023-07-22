@@ -35,6 +35,8 @@ function populateWebPageWithServerData(jsonData) {
 		const textNodeWithPopulation = document.createTextNode(`${population}`);
 		h4.appendChild(populationSpan);
 		h4.appendChild(textNodeWithPopulation);
+		const txtNodeWithHowPopulationIsMeasured = document.createTextNode(' sentient beings inhabiting this planet.');
+		h4.appendChild(txtNodeWithHowPopulationIsMeasured);
 		divPlanet.appendChild(h4);
 
 		const planetDiameter = planetsArr[i].diameter;
@@ -42,8 +44,10 @@ function populateWebPageWithServerData(jsonData) {
 		const planetDiameterSpan = document.createElement('span');
 		planetDiameterSpan.innerText = "Planet Diameter: ";
 		const txtNodeWithPlanetDiameter = document.createTextNode(`${planetDiameter}`);
-		planetDiameterSpan.appendChild(txtNodeWithPlanetDiameter);
 		h4PlanetDiameter.appendChild(planetDiameterSpan);
+		planetDiameterSpan.appendChild(txtNodeWithPlanetDiameter);
+		const txtNodeWithUnitOfMeasurementForDiameter = document.createTextNode(' kilometers.');
+		h4PlanetDiameter.appendChild(txtNodeWithUnitOfMeasurementForDiameter);
 		divPlanet.appendChild(h4PlanetDiameter);
 
 		const orbitalPeriod = planetsArr[i].orbitalPeriod;
@@ -53,6 +57,13 @@ function populateWebPageWithServerData(jsonData) {
 		const txtNodeWithOrbitalPeriod = document.createTextNode(`${orbitalPeriod}`);
 		orbitalPeriodSpan.appendChild(txtNodeWithOrbitalPeriod);
 		h4OrbitalPeriod.appendChild(orbitalPeriodSpan);
+		const txtNodeWithUnitOfOrbitalPeriodMeasurement = document.createTextNode(` days.`);
+		h4OrbitalPeriod.appendChild(txtNodeWithUnitOfOrbitalPeriodMeasurement);
+		const ulOrbitalPeriod = document.createElement('ul');
+		const liOrbitalPeriod = document.createElement('li');
+		liOrbitalPeriod.innerText = `It takes ${orbitalPeriod} days for this planet to complete a single orbit around its local star.`;
+		ulOrbitalPeriod.appendChild(liOrbitalPeriod);
+		h4OrbitalPeriod.appendChild(ulOrbitalPeriod);
 		divPlanet.appendChild(h4OrbitalPeriod);
 
 		const rotationalPeriod = planetsArr[i].rotationPeriod;
@@ -62,7 +73,14 @@ function populateWebPageWithServerData(jsonData) {
 		const txtNodeWithRotationalPeriod = document.createTextNode(`${rotationalPeriod}`);
 		rotationalPeriodSpan.appendChild(txtNodeWithRotationalPeriod);
 		h4RotationalPeriod.appendChild(rotationalPeriodSpan);
-		divPlanet.appendChild(h4RotationalPeriod);	
+		const txtNodeWithUnitOfRotationalMeasurement = document.createTextNode(' standard days.');
+		h4RotationalPeriod.appendChild(txtNodeWithUnitOfRotationalMeasurement);
+		const ulRotationalPeriod = document.createElement('ul');
+		const liRotationalPeriod = document.createElement('li');
+		liRotationalPeriod.innerText = `It takes ${rotationalPeriod} standard hous for this planet to complete a single rotation around its own axis.`;
+		ulRotationalPeriod.appendChild(liRotationalPeriod);
+		h4RotationalPeriod.appendChild(ulRotationalPeriod);
+		divPlanet.appendChild(h4RotationalPeriod);
 	}
 }
 

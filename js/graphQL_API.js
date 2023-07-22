@@ -34,9 +34,9 @@ function populateWebPageWithServerData(jsonData) {
 		divFilm.appendChild(header);
 
 		const director = filmsArr[i].director;
-		const h4 = document.createElement('h4');
 		const directorSpan = document.createElement('span');
 		directorSpan.innerText = "Director: ";
+		const h4 = document.createElement('h4');
 		const textNodeWithDirector = document.createTextNode(`${director}`);
 		h4.appendChild(directorSpan);
 		h4.appendChild(textNodeWithDirector);
