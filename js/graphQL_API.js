@@ -36,9 +36,11 @@ function populateWebPageWithServerData(jsonData) {
 		divFilm.className = "individualFilm";
 		mainDiv.appendChild(divFilm);
 		const filmTitle = filmsArr[i].title;
+		const header = document.createElement('header');
 		const h2 = document.createElement('h2');
 		h2.innerText = `${filmTitle}`;
-		divFilm.appendChild(h2);
+		header.appendChild(h2);
+		divFilm.appendChild(header);
 
 		const director = filmsArr[i].director;
 		const h3 = document.createElement('h3');

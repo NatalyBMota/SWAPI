@@ -35,3 +35,6 @@ https://studio.apollographql.com/public/star-wars-swapi/variant/current/explorer
 https://www.linkedin.com/learning/introduction-to-web-apis-22019269/what-is-an-api?u=100575394
 
 https://www.linkedin.com/learning/learning-git-and-github-14213624/travel-the-multiverse-with-git-and-github?u=100575394
+
+Used the following guide for adding fonts through @font-face:
+https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css

@@ -1,21 +1,24 @@
-@font-face {
-    font-family: "Stars Jedi Rounded";
-    src: url('fonts/star-jedi-font/StarJediRounded-jW3R.ttf') format('truetype');
-    font-family: "Stars Jedi";
-    src: url('fonts/star-jedi-font/StarJedi-DGRW.ttf') format('truetype');
+* {
+    box-sizing: border-box;
 }
-
 body {
     font-family: "Tenor Sans", sans-serif;
 }
 h1, h2 {
-    font-family: "Stars Jedi Rounded", "Audiowide", "Michroma", "Tenor Sans", sans-serif;
+    font-family: "Star Jedi Logo Doubleline1", "Stars Jedi Rounded", "Audiowide", "Michroma", "Tenor Sans", sans-serif;
 }
 h3, h4 {
     font-family: "Michroma", "Tenor Sans", "Audiowide", sans-serif;
 }
 .main {
-    margin-left: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 2.5em auto;
+    padding-left: 2.5em;
+    border-radius: .35em;
+    background: #fcfcfc;
+    overflow: hidden;
+    box-shadow: 0 0 26px rgba(0,0,0, .13);
 }
 .individualFilm {
     margin-bottom: 5rem;
